@@ -101,6 +101,17 @@ public class MyHashMap<K, V> {
         return "MyHashMapNodes{" + head + '}';
     }
 
+    public void delete(K key) {
+        MyMapNode<K, V> currentNode = head;
+        MyMapNode<K, V> previousNode = currentNode;
+        while (currentNode != null) {
+            if (currentNode.getKey().equals(key)) {
+                previousNode.next = currentNode.next;
+            }
+            previousNode = currentNode;
+            currentNode = currentNode.getNext();
+        }
+    }
 
 }
 

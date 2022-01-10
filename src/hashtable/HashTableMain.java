@@ -23,7 +23,8 @@ Converting the sentence to lower case and removing spaces.
             hashTable.add(word, count);
         }
         System.out.println(hashTable);
-
+        hashTable.delete("avoidable");
+        System.out.println(hashTable);
     }
 }
 
